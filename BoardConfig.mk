@@ -28,6 +28,9 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/samsung/ancora/BoardConfigVendor.mk
 
+# create the folder /usr to prevent the build from failing
+$(shell mkdir -p $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/)
+
 TARGET_BOARD_PLATFORM := msm7x30
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 
